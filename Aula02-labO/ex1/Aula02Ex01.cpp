@@ -18,13 +18,13 @@ string* procurarPessoa(string nomes[], int inicios[], int fins[], int quantidade
 }
 
 /*Comente a main para enviar*/
-/*
+
 int main(){
     string nomes[] = {"Gabriel", "Daniel", "Carlos"};
     int inicios[] = {1, 12, 20};
     int fins[] = {5, 17, 25};
     int quantidade = 3;
-    int inicio = 1;
+    int inicio = 20;
     int fim = 5;
 
     cout << procurarPessoa(nomes, inicios, fins, quantidade, inicio, fim) << endl;
@@ -35,4 +35,3 @@ int main(){
 
     return 0;
 }
-*/

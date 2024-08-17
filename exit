@@ -1,0 +1,24 @@
+[33mcommit 65bfe25bbfcfcc9932a24974ebf07605229ba062[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: unknown <Vinicius Kenji Yamada>
+Date:   Tue Aug 13 13:18:42 2024 -0300
+
+    Exp01 adicionado
+
+[33mcommit 6b5f6c8458a2616c46677774f17d7b8a73a9dbd6[m
+Merge: 735b1f3 484c63b
+Author: Vinicius Yamada <vinicius.yamada10@gmail.com>
+Date:   Mon Aug 12 16:57:50 2024 -0300
+
+    Merge branch 'main' of https://github.com/vinikenji10/exp_labO_2024
+
+[33mcommit 484c63bd7c98bd0cfd1faaf11e4c3dfe6baa3667[m
+Author: Vinicius Yamada <155477372+vinikenji10@users.noreply.github.com>
+Date:   Mon Aug 12 16:47:30 2024 -0300
+
+    Initial commit
+
+[33mcommit 735b1f3f281be049b6f80c72c8333102a4667186[m
+Author: Vinicius Yamada <vinicius.yamada10@gmail.com>
+Date:   Mon Aug 12 16:18:28 2024 -0300
+
+    Experiencia 2 de labO adicionada

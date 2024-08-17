@@ -30,22 +30,34 @@ int duracao, int dataMaxima, int* inicio, int& fim) {
 
 
 /*Comente a main para enviar*/
-/*
+
 int main() {
-  int inicios[] = {1, 10, 13};
-  int fins[] = {3, 13, 15};
-  int quantidade = 3;
-  int duracao = 3;
-  int dataMaxima = 20;
-  int inicio;
-  int fim;
+  int inicios1[] = {1, 10, 13};
+  int fins1[] = {3, 13, 15};
+  int quantidade1 = 3;
+  int duracao1 = 3;
+  int dataMaxima1 = 20;
+  int inicio1;
+  int fim1;
 
-  bool encontrou = obterPrimeiraDisponibilidade(inicios, fins, quantidade, duracao, dataMaxima, &inicio, fim);
+  bool encontrou1 = obterPrimeiraDisponibilidade(inicios1, fins1, quantidade1, duracao1, dataMaxima1, &inicio1, fim1);
 
-  cout << encontrou << endl;
-  cout << inicio << endl;
-  cout << fim << endl;
+  cout << encontrou1 << endl;
+  cout << inicio1 << endl;
+  cout << fim1 << endl;
 
+  int inicios1[] = {1, 10, 13};
+  int fins1[] = {3, 13, 15};
+  int quantidade1 = 3;
+  int duracao1 = 3;
+  int dataMaxima1 = 20;
+  int inicio1;
+  int fim1;
+
+  bool encontrou1 = obterPrimeiraDisponibilidade(inicios1, fins1, quantidade1, duracao1, dataMaxima1, &inicio1, fim1);
+
+  cout << encontrou1 << endl;
+  cout << inicio1 << endl;
+  cout << fim1 << endl;
   return 0;
 }
-*/

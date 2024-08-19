@@ -38,6 +38,37 @@ public:
     void imprimir();
 };
 
+bool Reserva::adicionarQuarto(Quarto *q) {
+    if (quarto1 == nullptr) {
+        quarto1 = q;
+        return true;
+    }
+
+    if (quarto2 == nullptr) {
+        quarto2 = q;
+        return true;
+    }
+
+    return false;
+}
+
+double Reserva::calcularPreco() {
+    if (quarto1 == nullptr && quarto2 == nullptr) {
+        return 0;
+    }
+
+    double p1 = quarto1->getPrecoDiaria();
+    double p2 = quarto2->getPrecoDiaria();
+
+    return (p1+p2)*(fim-inicio);
+}
+
+void Reserva::imprimir() {
+    cout << "Reserva:" << endl;
+    quarto1->imprimir();
+    quarto2->imprimir();
+    cout << "Preco total: " << calcularPreco() << endl;
+}
 
 // Implementar os metodos da classe Reserva
 
@@ -58,10 +89,29 @@ void teste1() {
 }
 
 void teste2() {
-    // Implemente a funcao teste do exercicio 02 segundo o enunciado
+    Quarto *q1 = new Quarto;
+    Quarto *q2 = new Quarto;
+
+    q1->numeroDoQuarto = 31;
+    q1->numeroDePessoas = 3;
+    q1->numeroDeCamas = 2;
+
+    q2->numeroDoQuarto = 32;
+    q2->numeroDePessoas = 2;
+    q2->numeroDeCamas = 1;
+
+    q1->imprimir();
+    q2->imprimir();
+
+    Reserva *r = new Reserva;
+    r->inicio = 2;
+    r->fim = 13;
+    r->adicionarQuarto(q1);
+    r->adicionarQuarto(q2);
+    r->imprimir();
 }
 
 int main() {
-    teste1();
+    teste2();
     return 0;
 }

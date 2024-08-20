@@ -16,14 +16,15 @@ public:
 double Quarto::getPrecoDiaria() {
     if (numeroDePessoas == 2) {
         return 150;
-    } else {
-        return numeroDePessoas*100;
     }
-}
+    
+    return numeroDePessoas*100;
+    
+};
 
 void Quarto::imprimir() {
     cout << "Quarto " << numeroDoQuarto << ": " << numeroDePessoas << " pessoas, " << numeroDeCamas << " camas - Diaria custa " << getPrecoDiaria() << endl;
-}
+};
 
 // Implementar os metodos da classe Quarto
 
@@ -44,31 +45,44 @@ bool Reserva::adicionarQuarto(Quarto *q) {
         return true;
     }
 
-    if (quarto2 == nullptr) {
+    if (quarto2 == nullptr && quarto1->numeroDoQuarto != q->numeroDoQuarto) {
         quarto2 = q;
         return true;
     }
 
     return false;
-}
+};
 
 double Reserva::calcularPreco() {
+    double p1 = 0;
+    double p2 = 0;
+
     if (quarto1 == nullptr && quarto2 == nullptr) {
         return 0;
+    } else {
+
+    if (quarto1 != nullptr) {
+        p1 = quarto1->getPrecoDiaria();
     }
 
-    double p1 = quarto1->getPrecoDiaria();
-    double p2 = quarto2->getPrecoDiaria();
+    if (quarto2 != nullptr) {
+        p2 = quarto2->getPrecoDiaria();
+    }
 
     return (p1+p2)*(fim-inicio);
-}
+    }
+};
 
 void Reserva::imprimir() {
     cout << "Reserva:" << endl;
-    quarto1->imprimir();
-    quarto2->imprimir();
+    if (quarto1 != nullptr) {
+        quarto1->imprimir();
+    }
+    if (quarto2 != nullptr) {
+        quarto2->imprimir();
+    }
     cout << "Preco total: " << calcularPreco() << endl;
-}
+};
 
 // Implementar os metodos da classe Reserva
 
@@ -86,7 +100,7 @@ void teste1() {
 
     q1->imprimir();
     q2->imprimir();
-}
+};
 
 void teste2() {
     Quarto *q1 = new Quarto;
@@ -109,9 +123,9 @@ void teste2() {
     r->adicionarQuarto(q1);
     r->adicionarQuarto(q2);
     r->imprimir();
-}
+};
 
-int main() {
+/* int main() {
     teste2();
     return 0;
-}
+}; */

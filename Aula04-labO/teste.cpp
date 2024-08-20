@@ -3,41 +3,17 @@
 
 using namespace std;
 
-class Reserva
-{
-public:
-    int quarto;
-    int inicio = 0;
-    int fim = 0;
-
-    void setQuarto(int numeroDoQuarto);
-    void setInicio(int inicio);
-    void setFim(int fim);
-    
-    int getInicio();
-    int getFim();
-    int getQuarto();
-    double getPreco();
-    
-    void imprimir();
-};
-
-
-double Reserva::getPreco()
-{
-    return 100*(fim - inicio);
-}
-
-void Reserva::imprimir()
-{
-    cout << "Reserva ("<< inicio << "-" << fim << "): Quarto " << quarto << " - " << getPreco()<< " reais" << endl;
-}
-
 /**
  * Implementar as funcoes teste
  **/
 void teste1() {
-    // IMPLEMENTE seguindo o enunciado
+    Reserva *r1 = new Reserva;
+
+    r1->quarto = 31;
+    r1->inicio = 1;
+    r1->fim = 6;
+
+    r1->imprimir();
 }
 
 void teste2() {

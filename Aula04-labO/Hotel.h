@@ -1,26 +1,18 @@
-/*
- * Use as diretivas adequadas e
- * inclua os arquivos e/ou bibliotecas necessarios para a classe.
- */
-
-/* 
+#include "Reserva.h"
 #define MAXIMO_DE_RESERVAS 10
+#ifndef HOTEL_H
+#define HOTEL_H
 
 class Hotel {
-     */
-    /*
-     * Os atributos devem ser acessiveis somente internamente ao escopo
-     * da classe
-     */
+private:
+    Reserva* reservas[MAXIMO_DE_RESERVAS] = {nullptr};
+    int quantidade = 0;
 
-    /*
-     * Os metodos devem ser acessíveis de fora do escopo da classe
-     */
-/*     bool adicionar(Reserva* reserva);
-
+public:
+    bool adicionar(Reserva* reserva);
     bool estaDisponivel(int quarto, int inicio, int fim);
-
     Reserva* getReserva(int i);
-    
     void imprimir();
-}; */
+}; 
+
+#endif

@@ -59,6 +59,7 @@
   "files.associations": {
     "format": "cpp",
     "optional": "cpp",
-    "new": "cpp"
+    "new": "cpp",
+    "iostream": "cpp"
   }
 }
